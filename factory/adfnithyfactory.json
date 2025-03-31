@@ -1,0 +1,9 @@
+{
+	"name": "adfnithyfactory",
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "67b33be5-d72f-4b85-b28d-32f1bca981b5",
+		"tenantId": "de04dd2a-e0f2-433c-971f-e840e1f42e7d"
+	}
+}
