@@ -214,7 +214,7 @@
 								"type": "Expression"
 							},
 							"ds_directory_input": {
-								"value": "@pipeline().parameters.pp_output",
+								"value": "@pipeline().parameters.pp_archive",
 								"type": "Expression"
 							}
 						}
