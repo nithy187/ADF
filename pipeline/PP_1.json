@@ -120,7 +120,7 @@
 				],
 				"outputs": [
 					{
-						"referenceName": "DelimitedText1",
+						"referenceName": "ds_nit1",
 						"type": "DatasetReference"
 					}
 				]
@@ -160,16 +160,24 @@
 		],
 		"parameters": {
 			"pp_container": {
-				"type": "string"
+				"type": "string",
+				"defaultValue": "storageadls2"
 			},
 			"pp_input": {
-				"type": "string"
+				"type": "string",
+				"defaultValue": "project/input"
 			},
 			"pp_output": {
-				"type": "string"
+				"type": "string",
+				"defaultValue": "project/output"
 			},
 			"pp_archive": {
-				"type": "string"
+				"type": "string",
+				"defaultValue": "project/archive"
+			},
+			"pp_filename": {
+				"type": "string",
+				"defaultValue": "SalesLTSalesOrderHeader.txt"
 			}
 		},
 		"annotations": []
