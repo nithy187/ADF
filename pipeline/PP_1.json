@@ -76,7 +76,7 @@
 				]
 			},
 			{
-				"name": "Delformdataset",
+				"name": "Delfromdataset",
 				"type": "Delete",
 				"dependsOn": [
 					{
