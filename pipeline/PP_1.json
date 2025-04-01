@@ -126,7 +126,7 @@
 				]
 			},
 			{
-				"name": "Delfromdataset",
+				"name": "Delete_DS",
 				"type": "Delete",
 				"dependsOn": [
 					{
