@@ -70,7 +70,21 @@
 				"outputs": [
 					{
 						"referenceName": "dataset_1",
-						"type": "DatasetReference"
+						"type": "DatasetReference",
+						"parameters": {
+							"ds_container": {
+								"value": "@pipeline().parameters.pp_container",
+								"type": "Expression"
+							},
+							"ds_filename": {
+								"value": "@pipeline().parameters.pp_filename",
+								"type": "Expression"
+							},
+							"ds_directory_input": {
+								"value": "@pipeline().parameters.pp_input",
+								"type": "Expression"
+							}
+						}
 					}
 				]
 			},
@@ -187,6 +201,24 @@
 				},
 				"userProperties": [],
 				"typeProperties": {
+					"dataset": {
+						"referenceName": "dataset_1",
+						"type": "DatasetReference",
+						"parameters": {
+							"ds_container": {
+								"value": "@pipeline().parameters.pp_container",
+								"type": "Expression"
+							},
+							"ds_filename": {
+								"value": "@pipeline().parameters.pp_filename",
+								"type": "Expression"
+							},
+							"ds_directory_input": {
+								"value": "@pipeline().parameters.pp_output",
+								"type": "Expression"
+							}
+						}
+					},
 					"enableLogging": true,
 					"storeSettings": {
 						"type": "AzureBlobFSReadSettings",
