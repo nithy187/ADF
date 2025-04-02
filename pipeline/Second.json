@@ -46,6 +46,10 @@
 				],
 				"userProperties": [],
 				"typeProperties": {
+					"items": {
+						"value": "@activity('Meta_1').output.childItems",
+						"type": "Expression"
+					},
 					"isSequential": true,
 					"activities": [
 						{
@@ -56,7 +60,33 @@
 								"secureInput": false
 							},
 							"typeProperties": {
-								"waitOnCompletion": true
+								"pipeline": {
+									"referenceName": "PP_1",
+									"type": "PipelineReference"
+								},
+								"waitOnCompletion": true,
+								"parameters": {
+									"pp_container": {
+										"value": "@pipeline().parameters.pp_container",
+										"type": "Expression"
+									},
+									"pp_input": {
+										"value": "@pipeline().parameters.pp_input",
+										"type": "Expression"
+									},
+									"pp_output": {
+										"value": "@pipeline().parameters.pp_output",
+										"type": "Expression"
+									},
+									"pp_archive": {
+										"value": "@pipeline().parameters.pp_archive",
+										"type": "Expression"
+									},
+									"pp_filename": {
+										"value": "@item().name",
+										"type": "Expression"
+									}
+								}
 							}
 						}
 					]
