@@ -40,7 +40,7 @@
 					{
 						"activity": "Meta_1",
 						"dependencyConditions": [
-							"Completed"
+							"Succeeded"
 						]
 					}
 				],
