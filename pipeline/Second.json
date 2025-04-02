@@ -1,0 +1,63 @@
+{
+	"name": "Second",
+	"properties": {
+		"activities": [
+			{
+				"name": "Meta_1",
+				"type": "GetMetadata",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"dataset": {
+						"referenceName": "dataset_apr4",
+						"type": "DatasetReference"
+					},
+					"fieldList": [
+						"childItems",
+						"itemName",
+						"itemType"
+					],
+					"storeSettings": {
+						"type": "AzureBlobFSReadSettings",
+						"enablePartitionDiscovery": false
+					},
+					"formatSettings": {
+						"type": "DelimitedTextReadSettings"
+					}
+				}
+			},
+			{
+				"name": "ForEach1",
+				"type": "ForEach",
+				"dependsOn": [],
+				"userProperties": []
+			}
+		],
+		"parameters": {
+			"pp_container": {
+				"type": "string",
+				"defaultValue": "storageadls2"
+			},
+			"pp_input": {
+				"type": "string",
+				"defaultValue": "project/input"
+			},
+			"pp_output": {
+				"type": "string",
+				"defaultValue": "project/output"
+			},
+			"pp_archive": {
+				"type": "string",
+				"defaultValue": "project/archive"
+			}
+		},
+		"annotations": []
+	}
+}
