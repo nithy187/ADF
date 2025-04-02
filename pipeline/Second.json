@@ -55,7 +55,6 @@
 							"policy": {
 								"secureInput": false
 							},
-							"userProperties": [],
 							"typeProperties": {
 								"waitOnCompletion": true
 							}
