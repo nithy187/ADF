@@ -134,6 +134,10 @@
 			"pp_archive": {
 				"type": "string",
 				"defaultValue": "project/archive"
+			},
+			"pp_filetype": {
+				"type": "string",
+				"defaultValue": "txt"
 			}
 		},
 		"annotations": []
