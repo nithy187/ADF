@@ -17,9 +17,27 @@
 				"typeProperties": {
 					"dataset": {
 						"referenceName": "Data_set_3",
-						"type": "DatasetReference"
+						"type": "DatasetReference",
+						"parameters": {
+							"Z_Container": {
+								"value": "@pipeline().parameters.P_Cotainer",
+								"type": "Expression"
+							},
+							"Z_Input": {
+								"value": "@pipeline().parameters.P_Input",
+								"type": "Expression"
+							},
+							"ZOutput": {
+								"value": "@pipeline().parameters.P_Output",
+								"type": "Expression"
+							}
+						}
 					},
-					"fieldList": [],
+					"fieldList": [
+						"childItems",
+						"itemName",
+						"itemType"
+					],
 					"storeSettings": {
 						"type": "AzureBlobFSReadSettings",
 						"enablePartitionDiscovery": false
