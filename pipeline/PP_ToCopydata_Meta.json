@@ -1,6 +1,35 @@
 {
 	"name": "PP_ToCopydata_Meta",
 	"properties": {
+		"activities": [
+			{
+				"name": "Get Metadata1",
+				"type": "GetMetadata",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"dataset": {
+						"referenceName": "Data_set_3",
+						"type": "DatasetReference"
+					},
+					"fieldList": [],
+					"storeSettings": {
+						"type": "AzureBlobFSReadSettings",
+						"enablePartitionDiscovery": false
+					},
+					"formatSettings": {
+						"type": "DelimitedTextReadSettings"
+					}
+				}
+			}
+		],
 		"parameters": {
 			"P_Cotainer": {
 				"type": "string",
@@ -13,9 +42,6 @@
 			"P_Output": {
 				"type": "string",
 				"defaultValue": "project/output"
-			},
-			"P_Filename": {
-				"type": "string"
 			},
 			"P_Archeive": {
 				"type": "string",
