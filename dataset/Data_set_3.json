@@ -14,9 +14,6 @@
 			},
 			"ZOutput": {
 				"type": "string"
-			},
-			"ZFinename": {
-				"type": "string"
 			}
 		},
 		"annotations": [],
