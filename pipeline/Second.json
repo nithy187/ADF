@@ -16,8 +16,22 @@
 				"userProperties": [],
 				"typeProperties": {
 					"dataset": {
-						"referenceName": "dataset_apr4",
-						"type": "DatasetReference"
+						"referenceName": "dataset_1",
+						"type": "DatasetReference",
+						"parameters": {
+							"ds_container": {
+								"value": "@pipeline().parameters.pp_container",
+								"type": "Expression"
+							},
+							"ds_filename": {
+								"value": "@pipeline().parameters.pp_filetype",
+								"type": "Expression"
+							},
+							"ds_directory_input": {
+								"value": "@pipeline().parameters.pp_input",
+								"type": "Expression"
+							}
+						}
 					},
 					"fieldList": [
 						"childItems",
@@ -105,7 +119,6 @@
 						]
 					}
 				],
-				"userProperties": [],
 				"typeProperties": {
 					"items": {
 						"value": "@activity('Meta_1').output.itemName",
