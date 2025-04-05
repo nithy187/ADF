@@ -5,10 +5,6 @@
 		"typeProperties": {
 			"sources": [
 				{
-					"dataset": {
-						"referenceName": "Dataflow_dataset",
-						"type": "DatasetReference"
-					},
 					"name": "dataflow1"
 				}
 			],
@@ -16,8 +12,7 @@
 			"transformations": [],
 			"scriptLines": [
 				"source(allowSchemaDrift: true,",
-				"     validateSchema: false,",
-				"     ignoreNoFilesFound: false) ~> dataflow1"
+				"     validateSchema: false) ~> dataflow1"
 			]
 		}
 	}
