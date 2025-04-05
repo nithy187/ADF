@@ -121,7 +121,7 @@
 				],
 				"typeProperties": {
 					"items": {
-						"value": "@activity('Meta_1').output.itemName",
+						"value": "@activity('Meta_1').output.childItems",
 						"type": "Expression"
 					},
 					"condition": {
