@@ -5,14 +5,19 @@
 		"typeProperties": {
 			"sources": [
 				{
-					"name": "dataflow1"
+					"dataset": {
+						"referenceName": "newdataset",
+						"type": "DatasetReference"
+					},
+					"name": "DF1"
 				}
 			],
 			"sinks": [],
 			"transformations": [],
 			"scriptLines": [
 				"source(allowSchemaDrift: true,",
-				"     validateSchema: false) ~> dataflow1"
+				"     validateSchema: false,",
+				"     ignoreNoFilesFound: false) ~> DF1"
 			]
 		}
 	}
