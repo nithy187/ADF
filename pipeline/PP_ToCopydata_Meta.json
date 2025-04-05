@@ -1,0 +1,27 @@
+{
+	"name": "PP_ToCopydata_Meta",
+	"properties": {
+		"parameters": {
+			"P_Cotainer": {
+				"type": "string",
+				"defaultValue": "storageadls2"
+			},
+			"P_Input": {
+				"type": "string",
+				"defaultValue": "project/input"
+			},
+			"P_Output": {
+				"type": "string",
+				"defaultValue": "project/output"
+			},
+			"P_Filename": {
+				"type": "string"
+			},
+			"P_Archeive": {
+				"type": "string",
+				"defaultValue": "project/archive"
+			}
+		},
+		"annotations": []
+	}
+}
