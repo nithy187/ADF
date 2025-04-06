@@ -21,8 +21,18 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobFSLocation",
-				"folderPath": "project/input",
-				"fileSystem": "storageadls2"
+				"fileName": {
+					"value": "@dataset().X_Filename",
+					"type": "Expression"
+				},
+				"folderPath": {
+					"value": "@dataset().X_Input",
+					"type": "Expression"
+				},
+				"fileSystem": {
+					"value": "@dataset().X_Contariner",
+					"type": "Expression"
+				}
 			},
 			"columnDelimiter": "\t",
 			"escapeChar": "\\",
