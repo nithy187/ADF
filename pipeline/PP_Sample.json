@@ -70,7 +70,21 @@
 				"outputs": [
 					{
 						"referenceName": "DS_Apr06",
-						"type": "DatasetReference"
+						"type": "DatasetReference",
+						"parameters": {
+							"X_Contariner": {
+								"value": "@pipeline().parameters.Pa_Container",
+								"type": "Expression"
+							},
+							"X_Input": {
+								"value": "@pipeline().parameters.Pa_Input",
+								"type": "Expression"
+							},
+							"X_Filename": {
+								"value": "@pipeline().parameters.Pa_Filename",
+								"type": "Expression"
+							}
+						}
 					}
 				]
 			},
