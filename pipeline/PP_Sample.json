@@ -50,7 +50,21 @@
 				"inputs": [
 					{
 						"referenceName": "DS_Apr06",
-						"type": "DatasetReference"
+						"type": "DatasetReference",
+						"parameters": {
+							"X_Contariner": {
+								"value": "@pipeline().parameters.Pa_Container",
+								"type": "Expression"
+							},
+							"X_Input": {
+								"value": "@pipeline().parameters.Pa_Input",
+								"type": "Expression"
+							},
+							"X_Filename": {
+								"value": "@pipeline().parameters.Pa_Filename",
+								"type": "Expression"
+							}
+						}
 					}
 				],
 				"outputs": [
@@ -63,7 +77,14 @@
 			{
 				"name": "Copy data2",
 				"type": "Copy",
-				"dependsOn": [],
+				"dependsOn": [
+					{
+						"activity": "Copy data1",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
 				"policy": {
 					"timeout": "0.12:00:00",
 					"retry": 0,
@@ -79,16 +100,20 @@
 		],
 		"parameters": {
 			"Pa_Container": {
-				"type": "string"
+				"type": "string",
+				"defaultValue": "storageadls2"
 			},
 			"Pa_Input": {
-				"type": "string"
+				"type": "string",
+				"defaultValue": "project/input"
 			},
 			"Pa_Output": {
-				"type": "string"
+				"type": "string",
+				"defaultValue": "project/output"
 			},
 			"Pa_Filename": {
-				"type": "string"
+				"type": "string",
+				"defaultValue": "SalesLTAddress.txt"
 			}
 		},
 		"annotations": []
