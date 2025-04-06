@@ -108,8 +108,39 @@
 				},
 				"userProperties": [],
 				"typeProperties": {
+					"source": {
+						"type": "DelimitedTextSource",
+						"storeSettings": {
+							"type": "AzureBlobFSReadSettings",
+							"recursive": true,
+							"enablePartitionDiscovery": false
+						},
+						"formatSettings": {
+							"type": "DelimitedTextReadSettings"
+						}
+					},
 					"enableStaging": false
-				}
+				},
+				"inputs": [
+					{
+						"referenceName": "DS_Apr06",
+						"type": "DatasetReference",
+						"parameters": {
+							"X_Contariner": {
+								"value": "@pipeline().parameters.Pa_Container",
+								"type": "Expression"
+							},
+							"X_Input": {
+								"value": "@pipeline().parameters.Pa_Output",
+								"type": "Expression"
+							},
+							"X_Filename": {
+								"value": "@pipeline().parameters.Pa_Filename",
+								"type": "Expression"
+							}
+						}
+					}
+				]
 			}
 		],
 		"parameters": {
