@@ -10,7 +10,7 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobFSLocation",
-				"fileName": "Store_product",
+				"fileName": "Store_product.csv",
 				"folderPath": "project/output/Sql",
 				"fileSystem": "storageadls2"
 			},
