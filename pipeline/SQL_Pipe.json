@@ -110,7 +110,8 @@
 		],
 		"parameters": {
 			"Sql_pp": {
-				"type": "string"
+				"type": "string",
+				"defaultValue": "Blue"
 			}
 		},
 		"annotations": []
