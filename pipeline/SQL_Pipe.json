@@ -108,6 +108,11 @@
 				]
 			}
 		],
+		"parameters": {
+			"Sql_pp": {
+				"type": "string"
+			}
+		},
 		"annotations": []
 	}
 }
