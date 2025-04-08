@@ -108,11 +108,6 @@
 				]
 			}
 		],
-		"parameters": {
-			"Sql_P1": {
-				"type": "String"
-			}
-		},
 		"annotations": []
 	}
 }
