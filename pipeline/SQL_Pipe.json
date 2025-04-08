@@ -17,9 +17,11 @@
 				"typeProperties": {
 					"source": {
 						"type": "AzureSqlSource",
-						"sqlReaderQuery": {
-							"value": "@concat('select ProductID,Name,Color from [SalesLT].[Product] where Color = ''',pipeline().parameters.Sql_P1,'''')\n",
-							"type": "Expression"
+						"sqlReaderStoredProcedureName": "[dbo].[GetProductsByColor]",
+						"storedProcedureParameters": {
+							"Color": {
+								"type": "String"
+							}
 						},
 						"queryTimeout": "02:00:00",
 						"partitionOption": "None"
