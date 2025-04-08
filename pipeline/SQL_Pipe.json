@@ -20,7 +20,8 @@
 						"sqlReaderStoredProcedureName": "[dbo].[GetProductsByColor]",
 						"storedProcedureParameters": {
 							"Color": {
-								"type": "String"
+								"type": "String",
+								"value": "red"
 							}
 						},
 						"queryTimeout": "02:00:00",
