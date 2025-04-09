@@ -15,7 +15,13 @@
 				},
 				"userProperties": [],
 				"typeProperties": {
-					"notebookPath": "/Users/nitty0102@gmail.com/First_Pgm"
+					"notebookPath": "/Users/nitty0102@gmail.com/First_Pgm",
+					"baseParameters": {
+						"wid": {
+							"value": "@pipeline().parameters.wid_PP",
+							"type": "Expression"
+						}
+					}
 				},
 				"linkedServiceName": {
 					"referenceName": "AzureDatabricks1",
@@ -23,6 +29,11 @@
 				}
 			}
 		],
+		"parameters": {
+			"wid_PP": {
+				"type": "String"
+			}
+		},
 		"annotations": []
 	}
 }
