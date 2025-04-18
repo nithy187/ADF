@@ -137,7 +137,21 @@
 										"inputs": [
 											{
 												"referenceName": "Getmeta_parameter",
-												"type": "DatasetReference"
+												"type": "DatasetReference",
+												"parameters": {
+													"GM_container": {
+														"value": "@item().container_name",
+														"type": "Expression"
+													},
+													"GM_folder": {
+														"value": "@item().source_dir",
+														"type": "Expression"
+													},
+													"GM_Filename": {
+														"value": "@item().file_name",
+														"type": "Expression"
+													}
+												}
 											}
 										]
 									}
