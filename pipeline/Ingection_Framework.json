@@ -58,7 +58,37 @@
 								"secureOutput": false,
 								"secureInput": false
 							},
-							"userProperties": []
+							"userProperties": [],
+							"typeProperties": {
+								"dataset": {
+									"referenceName": "Getmeta_parameter",
+									"type": "DatasetReference",
+									"parameters": {
+										"GM_container": {
+											"value": "@item().container_name",
+											"type": "Expression"
+										},
+										"GM_folder": {
+											"value": "@item().source_dir",
+											"type": "Expression"
+										},
+										"GM_Filename": {
+											"value": "@item().file_name",
+											"type": "Expression"
+										}
+									}
+								},
+								"fieldList": [
+									"exists"
+								],
+								"storeSettings": {
+									"type": "AzureBlobFSReadSettings",
+									"enablePartitionDiscovery": false
+								},
+								"formatSettings": {
+									"type": "DelimitedTextReadSettings"
+								}
+							}
 						}
 					]
 				}
