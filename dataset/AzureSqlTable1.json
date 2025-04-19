@@ -96,7 +96,7 @@
 		],
 		"typeProperties": {
 			"schema": "dbo",
-			"table": "control_table"
+			"table": "control_table_poc"
 		}
 	}
 }
