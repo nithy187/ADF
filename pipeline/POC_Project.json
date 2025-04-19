@@ -62,6 +62,10 @@
 							"typeProperties": {
 								"source": {
 									"type": "AzureSqlSource",
+									"sqlReaderQuery": {
+										"value": "@item().query",
+										"type": "Expression"
+									},
 									"queryTimeout": "02:00:00",
 									"partitionOption": "None"
 								},
@@ -95,7 +99,13 @@
 							"outputs": [
 								{
 									"referenceName": "out_from_sql",
-									"type": "DatasetReference"
+									"type": "DatasetReference",
+									"parameters": {
+										"store_filename": {
+											"value": "@concat(replace(replace(replace(item().Table_name, '[', ''), ']', ''), '.', '_'), '.csv')",
+											"type": "Expression"
+										}
+									}
 								}
 							]
 						}
