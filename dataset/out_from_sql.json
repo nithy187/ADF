@@ -7,10 +7,12 @@
 		},
 		"parameters": {
 			"store_cont": {
-				"type": "string"
+				"type": "string",
+				"defaultValue": "storageadls2"
 			},
 			"store_exction": {
-				"type": "string"
+				"type": "string",
+				"defaultValue": "project/poc/input"
 			},
 			"store_filename": {
 				"type": "string"
