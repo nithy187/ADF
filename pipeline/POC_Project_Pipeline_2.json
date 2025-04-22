@@ -15,7 +15,13 @@
 				},
 				"userProperties": [],
 				"typeProperties": {
-					"notebookPath": "/Users/nitty0102@gmail.com/Poc_Storing_as_deta"
+					"notebookPath": "/Users/nitty0102@gmail.com/Poc_Storing_as_deta",
+					"baseParameters": {
+						"Path_mount": {
+							"value": "/mnt/nithy2/project/poc/deltalog/",
+							"type": "Expression"
+						}
+					}
 				},
 				"linkedServiceName": {
 					"referenceName": "AzureDatabricks2",
