@@ -1,0 +1,39 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "adfnithyfactory"
+		},
+		"AzureDataLakeStorage1_accountKey": {
+			"value": ""
+		},
+		"AzureDatabricks1_accessToken": {
+			"value": ""
+		},
+		"AzureDatabricks2_accessToken": {
+			"value": ""
+		},
+		"AzureSqlDatabase1_password": {
+			"value": ""
+		},
+		"AzureDataLakeStorage1_properties_typeProperties_url": {
+			"value": "https://saadlsnit2025.dfs.core.windows.net/"
+		},
+		"AzureDatabricks1_properties_typeProperties_existingClusterId": {
+			"value": "0409-170247-i3pjrr6u"
+		},
+		"AzureDatabricks2_properties_typeProperties_existingClusterId": {
+			"value": "0421-134447-syxgf8jh"
+		},
+		"AzureSqlDatabase1_properties_typeProperties_server": {
+			"value": "nithyserver2.database.windows.net"
+		},
+		"AzureSqlDatabase1_properties_typeProperties_database": {
+			"value": "nithydatabase2"
+		},
+		"AzureSqlDatabase1_properties_typeProperties_userName": {
+			"value": "nithyadmin2"
+		}
+	}
+}
