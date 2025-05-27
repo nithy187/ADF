@@ -56,7 +56,10 @@
 				"outputs": [
 					{
 						"referenceName": "sec_sink_ds",
-						"type": "DatasetReference"
+						"type": "DatasetReference",
+						"parameters": {
+							"Filename": "sample_2.parquet"
+						}
 					}
 				]
 			}
