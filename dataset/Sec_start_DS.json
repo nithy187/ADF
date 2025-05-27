@@ -1,0 +1,29 @@
+{
+	"name": "Sec_start_DS",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureDataLakeStorage1",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": "SalesLTSalesOrderDetail.csv",
+				"folderPath": "Input",
+				"fileSystem": "master"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "SalesOrderID\tSalesOrderDetailID\tOrderQty\tProductID\tUnitPrice\tUnitPriceDiscount\tLineTotal\trowguid\tModifiedDate",
+				"type": "String"
+			}
+		]
+	}
+}
