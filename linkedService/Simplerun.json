@@ -1,0 +1,13 @@
+{
+	"name": "Simplerun",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"annotations": [],
+		"type": "AzureDatabricks",
+		"typeProperties": {
+			"domain": "https://adb-2136724085231222.2.azuredatabricks.net",
+			"existingClusterId": "0527-093246-rbzkwz20",
+			"encryptedCredential": "ew0KICAiVmVyc2lvbiI6ICIyMDE3LTExLTMwIiwNCiAgIlByb3RlY3Rpb25Nb2RlIjogIktleSIsDQogICJTZWNyZXRDb250ZW50VHlwZSI6ICJQbGFpbnRleHQiLA0KICAiQ3JlZGVudGlhbElkIjogIkRBVEFGQUNUT1JZQDRDRkYwMTYzLTBFMzYtNDU3My05NDI0LTk2QzQ4OTc5MDA3OV9iZjlkODFjMy05MWQ4LTQxYmMtYjI2NS1kYWUzODY0NTYwM2UiDQp9"
+		}
+	}
+}
