@@ -26,11 +26,39 @@
 							"type": "DelimitedTextReadSettings"
 						}
 					},
-					"enableStaging": false
+					"sink": {
+						"type": "DelimitedTextSink",
+						"storeSettings": {
+							"type": "AzureBlobFSWriteSettings"
+						},
+						"formatSettings": {
+							"type": "DelimitedTextWriteSettings",
+							"quoteAllText": true,
+							"fileExtension": ".txt"
+						}
+					},
+					"enableStaging": false,
+					"translator": {
+						"type": "TabularTranslator",
+						"typeConversion": true,
+						"typeConversionSettings": {
+							"allowDataTruncation": true,
+							"treatBooleanAsNumber": false
+						}
+					}
 				},
 				"inputs": [
 					{
 						"referenceName": "Dataset_source_to_bronze",
+						"type": "DatasetReference",
+						"parameters": {
+							"loadfile": "Sales_Initial_load.csv"
+						}
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "Rawsink",
 						"type": "DatasetReference"
 					}
 				]
