@@ -15,6 +15,10 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobFSLocation",
+				"fileName": {
+					"value": "@dataset().loadfile",
+					"type": "Expression"
+				},
 				"folderPath": "Project_first",
 				"fileSystem": "master"
 			},
