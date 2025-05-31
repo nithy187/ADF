@@ -47,7 +47,7 @@
 				"typeProperties": {
 					"source": {
 						"type": "AzureSqlSource",
-						"sqlReaderQuery": "Select max(AddressID) from Source_Sales;",
+						"sqlReaderQuery": "Select MAX(AddressID) as max from Source_Sales;",
 						"queryTimeout": "02:00:00",
 						"partitionOption": "None"
 					},
