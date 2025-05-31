@@ -5,8 +5,6 @@
 			{
 				"name": "firs_load",
 				"type": "Lookup",
-				"state": "Inactive",
-				"onInactiveMarkAs": "Succeeded",
 				"dependsOn": [],
 				"policy": {
 					"timeout": "0.12:00:00",
@@ -60,6 +58,50 @@
 					},
 					"firstRowOnly": false
 				}
+			},
+			{
+				"name": "Copy_increm_load",
+				"type": "Copy",
+				"dependsOn": [
+					{
+						"activity": "firs_load",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					},
+					{
+						"activity": "current_load",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"source": {
+						"type": "AzureSqlSource",
+						"sqlReaderQuery": {
+							"value": "Select * from Source_Sales where AddressID > @{activity('firs_load').output} AND AddressID <= @{activity('current_load').output}",
+							"type": "Expression"
+						},
+						"queryTimeout": "02:00:00",
+						"partitionOption": "None"
+					},
+					"enableStaging": false
+				},
+				"inputs": [
+					{
+						"referenceName": "initialload",
+						"type": "DatasetReference"
+					}
+				]
 			}
 		],
 		"annotations": []

@@ -20,7 +20,7 @@
 		],
 		"typeProperties": {
 			"schema": "dbo",
-			"table": "watermark_table"
+			"table": "Source_Sales"
 		}
 	}
 }
