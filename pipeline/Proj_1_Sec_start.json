@@ -89,7 +89,7 @@
 					"source": {
 						"type": "AzureSqlSource",
 						"sqlReaderQuery": {
-							"value": "Select * from Source_Sales where AddressID > @{activity('firs_load').output} AND AddressID <= @{activity('current_load').output}",
+							"value": "Select * from Source_Sales where AddressID > '@{activity('firs_load').output.value[0].Loaddate}' AND AddressID <= '@{activity('current_load').output.value[0].max}'",
 							"type": "Expression"
 						},
 						"queryTimeout": "02:00:00",
@@ -117,7 +117,10 @@
 				"inputs": [
 					{
 						"referenceName": "initialload",
-						"type": "DatasetReference"
+						"type": "DatasetReference",
+						"parameters": {
+							"t_name": "Source_Sales"
+						}
 					}
 				],
 				"outputs": [
