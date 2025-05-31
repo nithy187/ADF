@@ -5,6 +5,11 @@
 			"referenceName": "AzureSqlDatabase2",
 			"type": "LinkedServiceReference"
 		},
+		"parameters": {
+			"t_name": {
+				"type": "string"
+			}
+		},
 		"annotations": [],
 		"type": "AzureSqlTable",
 		"schema": [
@@ -15,7 +20,10 @@
 		],
 		"typeProperties": {
 			"schema": "dbo",
-			"table": "watermark_table"
+			"table": {
+				"value": "@dataset().t_name",
+				"type": "Expression"
+			}
 		}
 	}
 }

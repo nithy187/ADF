@@ -75,6 +75,15 @@
 					}
 				],
 				"typeProperties": {
+					"source": {
+						"type": "AzureSqlSource",
+						"queryTimeout": "02:00:00",
+						"partitionOption": "None"
+					},
+					"dataset": {
+						"referenceName": "initialload",
+						"type": "DatasetReference"
+					},
 					"firstRowOnly": false
 				}
 			},
@@ -92,11 +101,6 @@
 				"userProperties": []
 			}
 		],
-		"parameters": {
-			"Table_name": {
-				"type": "string"
-			}
-		},
 		"annotations": []
 	}
 }
