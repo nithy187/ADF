@@ -22,7 +22,7 @@
 						"partitionOption": "None"
 					},
 					"dataset": {
-						"referenceName": "AzureSqlTable1",
+						"referenceName": "poc_1",
 						"type": "DatasetReference"
 					},
 					"firstRowOnly": false
@@ -92,7 +92,7 @@
 							},
 							"inputs": [
 								{
-									"referenceName": "AzureSqlTable2",
+									"referenceName": "poc",
 									"type": "DatasetReference"
 								}
 							],

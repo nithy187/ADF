@@ -22,7 +22,7 @@
 						"partitionOption": "None"
 					},
 					"dataset": {
-						"referenceName": "AzureSqlTable1",
+						"referenceName": "poc_1",
 						"type": "DatasetReference"
 					},
 					"firstRowOnly": false
@@ -83,6 +83,7 @@
 								],
 								"storeSettings": {
 									"type": "AzureBlobFSReadSettings",
+									"recursive": true,
 									"enablePartitionDiscovery": false
 								},
 								"formatSettings": {
@@ -214,7 +215,10 @@
 											"scripts": [
 												{
 													"type": "Query",
-													"text": "@concat(\n    'INSERT INTO [dbo].[audit_log] VALUES (',\n    item().id, ', ',\n    '''',string('success'), '''', ', ',\n    '''', formatDateTime(utcNow(), 'yyyy-MM-dd HH:mm:ss'), '''',\n    ')'\n)"
+													"text": {
+														"value": "@concat(\n    'INSERT INTO [dbo].[audit_log] VALUES (',\n    item().id, ', ',\n    '''',string('success'), '''', ', ',\n    '''', formatDateTime(utcNow(), 'yyyy-MM-dd HH:mm:ss'), '''',\n    ')'\n)",
+														"type": "Expression"
+													}
 												}
 											],
 											"scriptBlockExecutionTimeout": "02:00:00"
