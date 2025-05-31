@@ -1,0 +1,20 @@
+{
+	"name": "Des_parq",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureDataLakeStorage1",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Parquet",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"folderPath": "Project_first/Bronze",
+				"fileSystem": "master"
+			},
+			"compressionCodec": "snappy"
+		},
+		"schema": []
+	}
+}
