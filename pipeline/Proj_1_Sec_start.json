@@ -102,6 +102,11 @@
 				"userProperties": []
 			}
 		],
+		"parameters": {
+			"Table_name": {
+				"type": "string"
+			}
+		},
 		"annotations": []
 	}
 }
