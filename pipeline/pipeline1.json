@@ -48,6 +48,22 @@
 						"value": "@greater(activity('fetching_details').output.size,0)",
 						"type": "Expression"
 					},
+					"ifFalseActivities": [
+						{
+							"name": "zerosetvariable",
+							"type": "SetVariable",
+							"dependsOn": [],
+							"policy": {
+								"secureOutput": false,
+								"secureInput": false
+							},
+							"userProperties": [],
+							"typeProperties": {
+								"variableName": "Filesizeiszero",
+								"value": ""
+							}
+						}
+					],
 					"ifTrueActivities": [
 						{
 							"name": "Copy data1",
@@ -111,6 +127,11 @@
 				}
 			}
 		],
+		"variables": {
+			"Filesizeiszero": {
+				"type": "String"
+			}
+		},
 		"annotations": []
 	}
 }
