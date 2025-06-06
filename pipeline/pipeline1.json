@@ -60,7 +60,7 @@
 							"userProperties": [],
 							"typeProperties": {
 								"variableName": "Filesizeiszero",
-								"value": ""
+								"value": "False"
 							}
 						}
 					],
