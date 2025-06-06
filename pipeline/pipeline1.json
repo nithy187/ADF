@@ -3,7 +3,7 @@
 	"properties": {
 		"activities": [
 			{
-				"name": "Get Metadata1",
+				"name": "fetching_details",
 				"type": "GetMetadata",
 				"dependsOn": [],
 				"policy": {
@@ -19,7 +19,9 @@
 						"referenceName": "file_1",
 						"type": "DatasetReference"
 					},
-					"fieldList": [],
+					"fieldList": [
+						"size"
+					],
 					"storeSettings": {
 						"type": "AzureBlobFSReadSettings",
 						"enablePartitionDiscovery": false
@@ -30,10 +32,23 @@
 				}
 			},
 			{
-				"name": "If Condition1",
+				"name": "If_size_above0",
 				"type": "IfCondition",
-				"dependsOn": [],
-				"userProperties": []
+				"dependsOn": [
+					{
+						"activity": "fetching_details",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"userProperties": [],
+				"typeProperties": {
+					"expression": {
+						"value": "@greater(activity('Get Metadata1').output.size, 0)",
+						"type": "Expression"
+					}
+				}
 			}
 		],
 		"annotations": []
